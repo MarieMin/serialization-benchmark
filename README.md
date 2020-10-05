@@ -12,7 +12,7 @@ This project contain tests of next serializers: JSON, ProtoBuf, MessagePack, Fla
 
 ```bash
 go get -u -t
-go test -bench='.*' ./
+go test -bench=.
 ```
 
 ### Test data
