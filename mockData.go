@@ -35,7 +35,7 @@ type LargeStruct struct {
 
 var (
 
-	// Mocks for test JSON and MessagePack
+	// Mocks for test JSON, MessagePack and FlatBuffers
 
 	SmallMock = SmallStruct{
 		TestInt32:  1024,
