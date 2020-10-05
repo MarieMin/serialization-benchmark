@@ -1,0 +1,32 @@
+namespace flatBuffers;
+
+table SmallStructFB {
+  test_int32: int32;
+  test_int64: int64;
+  test_float: float ;
+  test_double: double;
+  test_bool: bool;
+  test_bytes: [byte];
+  test_string: string;
+}
+
+table MediumStructFB {
+  test_int32: int32;
+  test_int64: int64;
+  test_float: float ;
+  test_double: double;
+  test_bool: bool;
+  test_bytes: [byte];
+  test_string: string;
+  test_int_array: [int64];
+  test_nested: SmallStructFB;
+}
+
+table LargeStructFB {
+  nested_medium_struct: [MediumStructFB];
+  nested_small_struct: [SmallStructFB];
+  test_bytes: [byte];
+  test_string: string;
+}
+
+root_type LargeStructFB;
