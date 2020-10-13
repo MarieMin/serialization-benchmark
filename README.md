@@ -13,11 +13,12 @@ This project contain tests of next serializers: JSON, ProtoBuf, MessagePack, Fla
 ```bash
 go get -u -t
 go test -bench=.
+go test -bench=. -cpuprofile=cpu.out .
 ```
 
 ### Test data
 
-```go
+```
 type SmallStruct struct {
 	TestInt32  int32   `json:"testInt32"`
 	TestInt64  int64   `json:"testInt64"`
@@ -105,4 +106,42 @@ BenchmarkMessagePackUnmarshal/LargeData-4          89833             13555 ns/op
 BenchmarkFlatBuffersUnmarshal/SmallData-4        1295595               922 ns/op              32 B/op          1 allocs/op
 BenchmarkFlatBuffersUnmarshal/MediumData-4        132144              9024 ns/op             672 B/op          3 allocs/op
 BenchmarkFlatBuffersUnmarshal/LargeData-4         102468             11721 ns/op            1776 B/op          9 allocs/op
+```
+
+### CPU Profiling
+
+Commands for getting profiling information
+```bash
+go test -bench=. -cpuprofile=cpu.out .
+go tool pprof cpu.out
+(pprof) top50 -cum
+``` 
+
+Results
+```bash
+       cum   cum%
+      0.94s  2.20%  github.com/MarieMin/serialization-benchmark.BenchmarkProtobufMarshal.func2
+      0.97s  2.27%  github.com/MarieMin/serialization-benchmark.BenchmarkProtobufUnmarshal.func3
+      1s  2.34%  github.com/MarieMin/serialization-benchmark.BenchmarkMessagePackMarshal.func2
+      1.02s  2.39%  github.com/MarieMin/serialization-benchmark.BenchmarkFlatBuffersMarshal.func2
+      1.07s  2.51%  github.com/MarieMin/serialization-benchmark.BenchmarkFlatBuffersMarshal.func3
+      1.09s  2.55%  github.com/MarieMin/serialization-benchmark.BenchmarkProtobufMarshal.func3
+      1.11s  2.60%  github.com/MarieMin/serialization-benchmark.BenchmarkJSONUnmarshal.func1
+      1.16s  2.72%  github.com/MarieMin/serialization-benchmark.BenchmarkJSONMarshal.func2
+      1.18s  2.76%  github.com/MarieMin/serialization-benchmark.BenchmarkFlatBuffersUnmarshal.func2
+      1.23s  2.88%  github.com/MarieMin/serialization-benchmark.BenchmarkMessagePackMarshal.func3
+      1.24s  2.91%  github.com/MarieMin/serialization-benchmark.BenchmarkFlatBuffersMarshal.func1
+      1.36s  3.19%  github.com/MarieMin/serialization-benchmark.BenchmarkJSONUnmarshal.func2
+      1.36s  3.19%  github.com/MarieMin/serialization-benchmark.BenchmarkJSONMarshal.func3
+      1.41s  3.30%  github.com/MarieMin/serialization-benchmark.BenchmarkFlatBuffersUnmarshal.func3
+      1.51s  3.54%  github.com/MarieMin/serialization-benchmark.BenchmarkProtobufMarshal.func1
+      1.69s  3.96%  github.com/MarieMin/serialization-benchmark.BenchmarkFlatBuffersUnmarshal.func1
+      1.75s  4.10%  github.com/MarieMin/serialization-benchmark.BenchmarkJSONUnmarshal.func3
+      1.78s  4.17%  github.com/MarieMin/serialization-benchmark.BenchmarkProtobufUnmarshal.func2
+      1.83s  4.29%  github.com/MarieMin/serialization-benchmark.BenchmarkProtobufUnmarshal.func1
+      1.88s  4.40%  github.com/MarieMin/serialization-benchmark.BenchmarkJSONMarshal.func1
+      2.02s  4.73%  github.com/MarieMin/serialization-benchmark.BenchmarkMessagePackMarshal.func1
+      2.14s  5.01%  github.com/MarieMin/serialization-benchmark.BenchmarkMessagePackUnmarshal.func3
+      3.69s  8.65%  github.com/MarieMin/serialization-benchmark.BenchmarkMessagePackUnmarshal.func2
+      3.82s  8.95%  github.com/MarieMin/serialization-benchmark.BenchmarkMessagePackUnmarshal.func1
 ```

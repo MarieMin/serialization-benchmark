@@ -53,13 +53,10 @@ var (
 		TestFloat:  0.14285715,
 		TestDouble: 0.14285714285714285,
 		TestBool:   false,
-		TestBytes: []byte(`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eu consequat enim. Aenean in 
-						lacus quis sapien consectetur pulvinar. Cras libero massa, facilisis at tincidunt quis, maximus 
-						id mi. Aenean ultricies maximus sem vel volutpat. Nulla malesuada scelerisque risus et luctus.`),
-		TestString: `Nunc convallis mi sem, sit amet finibus felis fermentum id. Nulla auctor rutrum fermentum. Aenean
-						in lacus quis sapien consectetur pulvinar. Cras libero massa, facilisis at tincidunt quis, 
-						maximus id mi. Aenean ultricies maximus sem vel volutpat. Nulla malesuada scelerisque risus et 
-						luctus.`,
+		TestBytes: []byte(`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eu consequat enim. Aenean in lacus quis sapien consectetur pulvinar.
+         Cras libero massa, facilisis at tincidunt quis, maximus id mi. Aenean ultricies maximus sem vel volutpat. Nulla malesuada scelerisque risus et luctus.`),
+		TestString: `Nunc convallis mi sem, sit amet finibus felis fermentum id. Nulla auctor rutrum fermentum. Aenean in lacus quis sapien consectetur pulvinar. 
+         Cras libero massa, facilisis at tincidunt quis, maximus id mi. Aenean ultricies maximus sem vel volutpat. Nulla malesuada scelerisque risus et luctus.`,
 		TestIntArray: []int64{2, 67, 10000, 4546546, 345678, -1, -345678},
 		Nested:       SmallMock,
 	}
@@ -67,17 +64,19 @@ var (
 	LargeMock = LargeStruct{
 		NestedMediumMock: []MediumStruct{MediumMock, MediumMock, MediumMock},
 		NestedSmallMock:  []SmallStruct{SmallMock, SmallMock},
-		TestString: `Nulla auctor rutrum fermentum. Donec rhoncus malesuada odio, ut porttitor leo pulvinar 
-								vel. Curabitur vitae ex vestibulum risus sagittis consequat in ac urna.  Mauris blandit 
-								convallis hendrerit.Suspendisse potenti. Ut bibendum nunc a nisl aliquet, ac malesuada 
-								urna suscipit. Morbi et magna sem. Donec non diam eu nisi eleifend scelerisque. 	
-								Suspendisse eu leo vehicula, fermentum ipsum non, tincidunt lorem. Pellentesque justo 
-								urna, malesuada eu dui porta, semper dictum ex. Curabitur ut convallis sem.`,
-		TestBytes: []byte(`Nunc finibus congue augue, id porttitor tortor condimentum et. Curabitur ut 
-								convallis sem. Quisque quis nulla dignissim, viverra lacus ut, luctus turpis. 
-								Suspendisse sed tincidunt nulla, nec elementum mi. Curabitur vel elementum sapien, vitae 
-								mattis lectus. Integer id pharetra mi. Donec lacinia est ut vestibulum imperdiet. Sed 
-								dolor erat, lacinia ut pretium vel, porta non est.`),
+		TestString: `Nunc convallis mi sem, sit amet finibus felis fermentum id. Nulla auctor rutrum fermentum. Aeneanin lacus quis sapien consectetur pulvinar. 
+         Cras libero massa, facilisis at tincidunt quis, maximus id mi. Aenean ultricies maximus sem vel volutpat. Nulla malesuada scelerisque risus et luctus.
+         Nulla auctor rutrum fermentum. Donec rhoncus malesuada odio, ut porttitor leo pulvinar vel. Curabitur vitae ex vestibulum risus sagittis consequat in ac 
+         urna.  Mauris blandit convallis hendrerit.Suspendisse potenti. Ut bibendum nunc a nisl aliquet, ac malesuada urna suscipit. Morbi et magna sem. Donec 
+         non diam eu nisi eleifend scelerisque. Suspendisse eu leo vehicula, fermentum ipsum non, tincidunt lorem. Pellentesque justo urna, malesuada eu dui porta,  
+         semper dictum ex. Curabitur ut convallis sem lacinia ut pretium vel, porta non est nec elementum miacinia est ut vestibulum imperdiet `,
+		TestBytes: []byte(`Nunc convallis mi sem, sit amet finibus felis fermentum id. Nulla auctor rutrum fermentum. Aenean in lacus quis sapien consectetur 
+         pulvinar. Cras libero massa, facilisis at tincidunt quis, maximus id mi. Aenean ultricies maximus sem vel volutpat. Nulla malesuada scelerisque risus et 
+         luctus.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eu consequat enim. Aenean in lacus quis sapien consectetur pulvinar. Cras libero 
+         massa, facilisis at tincidunt quis, maximus id mi. Aenean ultricies maximus sem vel volutpat. Nulla malesuada scelerisque risus et luctus. Nunc finibus 
+         congue augue, id porttitor tortor condimentum et. Curabitur ut convallis sem. Quisque quis nulla dignissim, viverra lacus ut, luctus turpis. Suspendisse 
+         sed tincidunt nulla, nec elementum mi. Curabitur vel elementum sapien, vitae mattis lectus. Integer id pharetra mi. Donec lacinia est ut vestibulum 
+         imperdiet. Sed dolor erat, lacinia ut pretium vel, porta non est.`),
 	}
 
 	// Mocks for test ProtoBuf
@@ -97,13 +96,10 @@ var (
 		TestFloat:  0.14285715,
 		TestDouble: 0.14285714285714285,
 		TestBool:   false,
-		TestBytes: []byte(`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eu consequat enim. Aenean in 
-						lacus quis sapien consectetur pulvinar. Cras libero massa, facilisis at tincidunt quis, maximus 
-						id mi. Aenean ultricies maximus sem vel volutpat. Nulla malesuada scelerisque risus et luctus.`),
-		TestString: `Nunc convallis mi sem, sit amet finibus felis fermentum id. Nulla auctor rutrum fermentum. Aenean
-						in lacus quis sapien consectetur pulvinar. Cras libero massa, facilisis at tincidunt quis, 
-						maximus id mi. Aenean ultricies maximus sem vel volutpat. Nulla malesuada scelerisque risus et 
-						luctus.`,
+		TestBytes: []byte(`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eu consequat enim. Aenean in lacus quis sapien consectetur pulvinar.
+         Cras libero massa, facilisis at tincidunt quis, maximus id mi. Aenean ultricies maximus sem vel volutpat. Nulla malesuada scelerisque risus et luctus.`),
+		TestString: `Nunc convallis mi sem, sit amet finibus felis fermentum id. Nulla auctor rutrum fermentum. Aenean in lacus quis sapien consectetur pulvinar. 
+         Cras libero massa, facilisis at tincidunt quis, maximus id mi. Aenean ultricies maximus sem vel volutpat. Nulla malesuada scelerisque risus et luctus.`,
 		TestIntArray: []int64{2, 67, 10000, 4546546, 345678, -1, -345678},
 		Nested:       &SmallMockPB,
 	}
@@ -111,16 +107,18 @@ var (
 	LargeMockPB = proto_buf.LargeMessage{
 		MediumNestedStructure: []*proto_buf.MediumMessage{&MediumMockPB, &MediumMockPB, &MediumMockPB},
 		SmallNestedStructure:  []*proto_buf.SmallMessage{&SmallMockPB, &SmallMockPB},
-		TestString: `Nulla auctor rutrum fermentum. Donec rhoncus malesuada odio, ut porttitor leo pulvinar 
-								vel. Curabitur vitae ex vestibulum risus sagittis consequat in ac urna.  Mauris blandit 
-								convallis hendrerit.Suspendisse potenti. Ut bibendum nunc a nisl aliquet, ac malesuada 
-								urna suscipit. Morbi et magna sem. Donec non diam eu nisi eleifend scelerisque. 	
-								Suspendisse eu leo vehicula, fermentum ipsum non, tincidunt lorem. Pellentesque justo 
-								urna, malesuada eu dui porta, semper dictum ex. Curabitur ut convallis sem.`,
-		TestBytes: []byte(`Nunc finibus congue augue, id porttitor tortor condimentum et. Curabitur ut 
-								convallis sem. Quisque quis nulla dignissim, viverra lacus ut, luctus turpis. 
-								Suspendisse sed tincidunt nulla, nec elementum mi. Curabitur vel elementum sapien, vitae 
-								mattis lectus. Integer id pharetra mi. Donec lacinia est ut vestibulum imperdiet. Sed 
-								dolor erat, lacinia ut pretium vel, porta non est.`),
+		TestString: `Nunc convallis mi sem, sit amet finibus felis fermentum id. Nulla auctor rutrum fermentum. Aeneanin lacus quis sapien consectetur pulvinar. 
+         Cras libero massa, facilisis at tincidunt quis, maximus id mi. Aenean ultricies maximus sem vel volutpat. Nulla malesuada scelerisque risus et luctus.
+         Nulla auctor rutrum fermentum. Donec rhoncus malesuada odio, ut porttitor leo pulvinar vel. Curabitur vitae ex vestibulum risus sagittis consequat in ac 
+         urna.  Mauris blandit convallis hendrerit.Suspendisse potenti. Ut bibendum nunc a nisl aliquet, ac malesuada urna suscipit. Morbi et magna sem. Donec 
+         non diam eu nisi eleifend scelerisque. Suspendisse eu leo vehicula, fermentum ipsum non, tincidunt lorem. Pellentesque justo urna, malesuada eu dui porta,  
+         semper dictum ex. Curabitur ut convallis sem lacinia ut pretium vel, porta non est nec elementum miacinia est ut vestibulum imperdiet `,
+		TestBytes: []byte(`Nunc convallis mi sem, sit amet finibus felis fermentum id. Nulla auctor rutrum fermentum. Aenean in lacus quis sapien consectetur 
+         pulvinar. Cras libero massa, facilisis at tincidunt quis, maximus id mi. Aenean ultricies maximus sem vel volutpat. Nulla malesuada scelerisque risus et 
+         luctus.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eu consequat enim. Aenean in lacus quis sapien consectetur pulvinar. Cras libero 
+         massa, facilisis at tincidunt quis, maximus id mi. Aenean ultricies maximus sem vel volutpat. Nulla malesuada scelerisque risus et luctus. Nunc finibus 
+         congue augue, id porttitor tortor condimentum et. Curabitur ut convallis sem. Quisque quis nulla dignissim, viverra lacus ut, luctus turpis. Suspendisse 
+         sed tincidunt nulla, nec elementum mi. Curabitur vel elementum sapien, vitae mattis lectus. Integer id pharetra mi. Donec lacinia est ut vestibulum 
+         imperdiet. Sed dolor erat, lacinia ut pretium vel, porta non est.`),
 	}
 )
